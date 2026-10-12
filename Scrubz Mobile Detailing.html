@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SCRUBZ Mobile Detailing — Federal Way &amp; King County, WA</title>
+<meta name="description" content="100% mobile car detailing in Federal Way and King County, WA. Interior, exterior and deluxe details, paint correction and add-ons — we come to you.">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Primary">
+  <a href="#top" class="nav-logo" aria-label="Scrubz home">
+    <img class="mark" src="assets/logo-mark.png" alt="">
+    <img class="word" src="assets/logo-word.png" alt="Scrubz Mobile Detailing">
+  </a>
+  <div class="nav-links">
+    <a href="#packages">Packages</a>
+    <a href="#paint">Paint &amp; Add-ons</a>
+    <a href="#results">Results</a>
+    <a href="#mobile">How it works</a>
+  </div>
+  <a class="nav-phone" href="tel:+12064924729">(206) 492-4729</a>
+  <a class="btn btn-cyan" href="#quote">Get a quote</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top" data-screen-label="01 Hero">
+  <div class="hero-top">
+    <h1 class="h-xl">
+      <span class="ln"><span>We come</span></span>
+      <span class="ln"><span>to you. <span class="outline">You shine.</span></span></span>
+    </h1>
+    <div class="hero-side">
+      <span class="eyebrow">Federal Way · King County, WA</span>
+      <p>100% mobile car detailing — foam bath, deep interior extraction, paint correction and protection, done right in your driveway.</p>
+      <div class="hero-cta">
+        <a class="btn btn-cyan" href="#quote">Request a quote <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#packages">See packages</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="windshield" id="ws">
+    <img class="clean" src="assets/tesla-s-clean.jpg" alt="White Tesla Model S detailed by Scrubz in a residential driveway">
+    <canvas id="wsCanvas" aria-hidden="true"></canvas>
+    <div class="shade"></div>
+    <div class="sponge" id="sponge"></div>
+    <div class="ws-tag"><span class="pill"><span class="dot"></span>Drag to scrub</span></div>
+    <div class="ws-reset"><button class="pill" id="wsReset">↺ Foam it again</button></div>
+    <div class="ws-hud">
+      <span class="pill" id="wsMsg">Real Scrubz job · Driveway, King County</span>
+      <span class="pill meter"><span id="wsPct">0%</span> clean <span class="meter-bar"><i id="wsBar"></i></span></span>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Foam bath</span><span>Pet hair removal</span><span>Leather treatment</span><span>Hydrophobic sealant</span><span>Deep shampoo extraction</span><span>UV ray protection</span><span>Clay bar</span><span>Material restoration</span><span>Bio-degradable products</span>
+    <span>Foam bath</span><span>Pet hair removal</span><span>Leather treatment</span><span>Hydrophobic sealant</span><span>Deep shampoo extraction</span><span>UV ray protection</span><span>Clay bar</span><span>Material restoration</span><span>Bio-degradable products</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="sec" data-screen-label="02 About">
+  <div class="intro">
+    <div class="intro-copy rv">
+      <span class="eyebrow">The Scrubz difference</span>
+      <h2 class="h-l">A full detail bay,<br><span class="cy">parked</span> outside.</h2>
+      <p class="lede">Scrubz brings the whole process to your home or workplace — so your car gets meticulous, hands-on care while your day keeps moving. Every service is customizable, and pricing is shaped around your vehicle’s size and condition.</p>
+      <div class="intro-facts">
+        <div><b>100% Mobile</b><span>We bring the setup to you</span></div>
+        <div><b>Bio-degradable</b><span>Products that are kinder to your driveway</span></div>
+        <div><b>African-American Owned</b><span>Local to Federal Way</span></div>
+        <div><b>Budget friendly</b><span>Various payments available</span></div>
+      </div>
+    </div>
+    <div class="intro-pics">
+      <figure class="rv"><img src="assets/foam-tesla-x.jpg" alt="Tesla Model X covered in foam during a Scrubz wash" loading="lazy"><figcaption class="pill">Foam bath · Tesla Model X</figcaption></figure>
+      <figure class="rv"><img src="assets/tacoma-side.jpg" alt="Blue Toyota Tacoma after a Scrubz exterior detail" loading="lazy"><figcaption class="pill">Toyota Tacoma · Exterior</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="sec foam" id="packages" data-screen-label="03 Packages">
+  <div class="sec-head">
+    <div>
+      <span class="eyebrow">Auto detailing</span>
+      <h2 class="h-l" style="margin-top:22px">Pick your<br>level of clean.</h2>
+    </div>
+    <div>
+      <p class="lede" style="margin-bottom:24px">Three core packages. Start with the inside, the outside, or go all in — then add exactly what your vehicle needs.</p>
+      <div class="pkg-switch" role="tablist" aria-label="Filter packages">
+        <button class="on" data-f="all">All</button>
+        <button data-f="int">Interior</button>
+        <button data-f="ext">Exterior</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pkgs">
+    <article class="pkg rv" data-k="int">
+      <div class="pkg-img"><img src="assets/stock-interior-wipe.jpg" alt="Detailer wiping down a car interior" loading="lazy"><span class="pill">Inside</span></div>
+      <div class="pkg-body">
+        <span class="pkg-no">01 / PACKAGE</span>
+        <h3>Premium Interior Detail</h3>
+        <p class="d">A deep, steam-to-extraction reset for every surface you touch.</p>
+        <ul>
+          <li><i>01</i>Steaming &amp; vacuuming</li>
+          <li><i>02</i>Door jams &amp; glass cleaning</li>
+          <li><i>03</i>Headliner treatment &amp; air purge</li>
+          <li><i>04</i>Leather treatment &amp; material reconditioning</li>
+          <li><i>05</i>Pet hair &amp; heavy stain removal</li>
+          <li><i>06</i>Deep shampoo, extraction &amp; trunk extraction</li>
+          <li><i>07</i>Fabric protection</li>
+        </ul>
+        <div class="pkg-foot"><span class="mono">Priced by size &amp; condition</span><a class="btn" href="#quote" data-pick="Premium Interior Detail">Quote this</a></div>
+      </div>
+    </article>
+
+    <article class="pkg rv" data-k="ext">
+      <div class="pkg-img"><img src="assets/foam-tacoma.jpg" alt="Lifted Toyota Tacoma in a Scrubz foam bath" loading="lazy"><span class="pill">Outside</span></div>
+      <div class="pkg-body">
+        <span class="pkg-no">02 / PACKAGE</span>
+        <h3>Premium Exterior Detail</h3>
+        <p class="d">Foam bath to hydrophobic sealant — gloss you can see and protection you can feel.</p>
+        <ul>
+          <li><i>01</i>Foam bath &amp; pressure wash</li>
+          <li><i>02</i>Hand wash and dry</li>
+          <li><i>03</i>Tires, wheels &amp; rims cleaned, dressed and protected</li>
+          <li><i>04</i>Grille, trim, lights &amp; windows cleaned</li>
+          <li><i>05</i>Concentrated wax bath &amp; trim polish</li>
+          <li><i>06</i>Glass stripped of contaminants</li>
+          <li><i>07</i>Hydrophobic sealant &amp; UV ray protection</li>
+        </ul>
+        <div class="pkg-foot"><span class="mono">Priced by size &amp; condition</span><a class="btn" href="#quote" data-pick="Premium Exterior Detail">Quote this</a></div>
+      </div>
+    </article>
+
+    <article class="pkg feature rv" data-k="int ext">
+      <div class="pkg-img"><img src="assets/camaro-garage.jpg" alt="Black Chevrolet Camaro gleaming after a Scrubz deluxe detail" loading="lazy"><span class="pill"><span class="dot" style="background:var(--cyan);animation:none"></span>Inside + Outside</span></div>
+      <div class="pkg-body">
+        <span class="pkg-no">03 / ULTIMATE CARE</span>
+        <h3>Deluxe Detail</h3>
+        <p class="d">The ultimate car care package — both premium exterior and interior services in one visit.</p>
+        <ul>
+          <li class="inc"><i>+</i>Everything in Premium Interior</li>
+          <li class="inc"><i>+</i>Everything in Premium Exterior</li>
+          <li><i>01</i>Deep carpet shampoo &amp; extraction</li>
+          <li><i>02</i>Headliner, leather &amp; material restoration</li>
+          <li><i>03</i>Concentrated wax bath &amp; trim polish</li>
+          <li><i>04</i>Hydrophobic sealant &amp; UV ray protection</li>
+        </ul>
+        <div class="pkg-foot"><span class="mono">Priced by size &amp; condition</span><a class="btn" href="#quote" data-pick="Deluxe Detail">Quote this</a></div>
+      </div>
+    </article>
+  </div>
+  <div class="fine"><span>● Prices may vary</span><span>● All services are customizable</span><span>● Add-on services available</span></div>
+</section>
+
+<!-- PAINT + ADDONS -->
+<section class="sec foam" id="paint" style="border-radius:0;padding-top:0" data-screen-label="04 Paint & Add-ons">
+  <div class="sec-head">
+    <div>
+      <span class="eyebrow">Paint correction</span>
+      <h2 class="h-l" style="margin-top:22px">Bring back<br>the gloss.</h2>
+    </div>
+    <p class="lede">Brake dust, iron particles and road grime slowly dull your finish. Decontaminate, correct and seal it — so the shine lasts.</p>
+  </div>
+
+  <div class="paint">
+    <article class="paint-card rv">
+      <img src="assets/beading.jpg" alt="Water beading on freshly sealed paint" loading="lazy">
+      <div class="price"><b>$250</b><span class="mono">Varies by size &amp; condition</span></div>
+      <span class="eyebrow">Protect</span>
+      <h3>Clay &amp; Seal</h3>
+      <p>An iron decontamination spray and clay bar remove bonded contaminants, then a paint sealant lasting up to six months protects your paint from future damage.</p>
+      <div class="steps"><span><b>01</b>Exterior detail</span><span><b>02</b>Iron decon</span><span><b>03</b>Clay bar</span><span><b>04</b>Paint sealant</span></div>
+      <a class="btn btn-cyan" href="#quote" data-pick="Clay & Seal">Quote Clay &amp; Seal <span class="arr">→</span></a>
+    </article>
+    <article class="paint-card rv">
+      <img src="assets/paint-gloss.jpg" alt="Close-up of glossy dark paint reflecting light" loading="lazy">
+      <div class="price"><b>$500</b><span class="mono">Varies by size &amp; condition</span></div>
+      <span class="eyebrow">Correct</span>
+      <h3>Stage 1 Polish</h3>
+      <p>A thorough wash and clay bar treatment, followed by a polish to correct light imperfections and enhance shine — finished with a protective sealant or wax for a smooth, glossy finish.</p>
+      <div class="steps"><span><b>01</b>Hand wash</span><span><b>02</b>Clay bar</span><span><b>03</b>One-step compound &amp; polish</span><span><b>04</b>Sealant or wax</span></div>
+      <a class="btn btn-cyan" href="#quote" data-pick="Stage 1 Polish">Quote Stage 1 Polish <span class="arr">→</span></a>
+    </article>
+  </div>
+
+  <div class="addons rv">
+    <div class="side">
+      <span class="eyebrow">Add-ons</span>
+      <h3>Build it your way.</h3>
+      <p>Tap to stack add-ons onto any package. Your picks carry straight into the quote request.</p>
+      <div class="addon-total"><span class="mono" id="addonCount">0 selected</span><b id="addonSum">$0</b></div>
+    </div>
+    <div class="addon-list" id="addonList"></div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="sec" id="results" data-screen-label="05 Before & After">
+  <div class="ba-wrap">
+    <div class="ba rv" id="ba">
+      <img class="before" id="baBefore" src="assets/ba-element-exterior-before.jpg" alt="Before">
+      <img class="after" id="baAfter" src="assets/ba-element-exterior-after.jpg" alt="After">
+      <span class="pill lab l"><span class="dot"></span>Before</span>
+      <span class="pill lab r"><span class="dot"></span>After</span>
+      <div class="handle"><div class="knob">⇆</div></div>
+    </div>
+    <div class="ba-info rv">
+      <span class="eyebrow">Real results</span>
+      <h2 class="h-l">Drag the<br>line. See the<br><span class="cy">difference.</span></h2>
+      <p class="lede">Every photo here is a real Scrubz job — no filters, no stock. Slide across to compare.</p>
+      <div class="ba-now"><span class="n" id="baN">01/12</span><span class="t" id="baT">Honda Element</span><span class="s mono" id="baS">Exterior</span></div>
+      <div class="ba-thumbs" id="baThumbs"></div>
+      <div class="ba-nav"><button id="baPrev" aria-label="Previous">←</button><button id="baNext" aria-label="Next">→</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec how" id="mobile" data-screen-label="06 How it works" style="margin:0 clamp(8px,1.4vw,20px)">
+  <div class="sec-head">
+    <div>
+      <span class="eyebrow">100% mobile</span>
+      <h2 class="h-l" style="margin-top:22px">Your driveway<br>is the detail bay.</h2>
+    </div>
+    <p class="lede">No drop-offs, no waiting rooms. Request a quote, pick a time, and Scrubz rolls up to your home or office.</p>
+  </div>
+  <div class="how-grid">
+    <div class="how-step rv"><div class="img"><img src="assets/tacoma-night.jpg" alt="Toyota Tacoma at night" loading="lazy"></div><div class="tx"><span class="k">STEP 01</span><h3>Request a quote</h3><p>Tell us your vehicle, the package and any add-ons. Call, text or use the form below.</p></div></div>
+    <div class="how-step rv"><div class="img"><img src="assets/sequoia.jpg" alt="Toyota Sequoia parked in a residential driveway" loading="lazy"></div><div class="tx"><span class="k">STEP 02</span><h3>We roll up</h3><p>Scrubz arrives at your address — home, work, wherever the car is parked.</p></div></div>
+    <div class="how-step rv"><div class="img"><img src="assets/camaro-foam.jpg" alt="Black Camaro in foam" loading="lazy"></div><div class="tx"><span class="k">STEP 03</span><h3>Foam &amp; detail</h3><p>Foam bath, extraction, treatment and protection with bio-degradable products.</p></div></div>
+    <div class="how-step rv"><div class="img"><img src="assets/tesla-x-driveway.jpg" alt="Clean white Tesla Model X" loading="lazy"></div><div class="tx"><span class="k">STEP 04</span><h3>Drive off clean</h3><p>That just-left-the-showroom feeling, without ever leaving home.</p></div></div>
+  </div>
+  <div class="area rv">
+    <div class="radar"><i></i></div>
+    <div><h3>Federal Way &amp; King County</h3><p>Based in Federal Way, WA. Not sure if you’re in range? Send your address with the quote and we’ll confirm.</p></div>
+    <a class="btn btn-cyan" href="#quote">Check my area <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- REVIEW -->
+<section class="sec" data-screen-label="07 Review">
+  <div class="review">
+    <div class="rv">
+      <span class="eyebrow">Customer words</span>
+      <div class="quote-mark" aria-hidden="true">“</div>
+      <blockquote>My 5 Yr old Tesla X had that <em>newly purchased, just left the showroom touch</em> after Mo finished detailing it. You have a steady customer thanks to your superior work!</blockquote>
+      <cite><b>Yolanda R.</b><span class="mono">Tesla Model X · Jan 2023</span></cite>
+      <p class="lede" style="margin-top:22px;font-size:16px">“Excellent detail job!! Professional service and meticulous attention to detail.”</p>
+    </div>
+    <figure class="rv"><img src="assets/tesla-x-wheel.jpg" alt="White Tesla Model X wheel and side panel after detailing" loading="lazy"><figcaption class="pill">From the Scrubz gallery</figcaption></figure>
+  </div>
+</section>
+
+<!-- REEL -->
+<section class="reel" data-screen-label="08 Gallery">
+  <div class="reel-head">
+    <div><span class="eyebrow">@scrubzmobiledetailing</span><h2 class="h-l" style="margin-top:22px">Fresh off the foam.</h2></div>
+    <a class="btn btn-ghost" href="https://www.instagram.com/scrubzmobiledetailing/" target="_blank" rel="noopener">Follow on Instagram ↗</a>
+  </div>
+  <div class="reel-track" id="reel"></div>
+</section>
+
+<!-- QUOTE -->
+<section class="sec" id="quote" data-screen-label="09 Quote" style="padding-top:clamp(40px,6vw,80px)">
+  <div class="quote">
+    <div class="quote-side">
+      <span class="eyebrow">Book · Quote</span>
+      <h2 class="h-l">Let’s get<br>you <span class="cy">scrubbed.</span></h2>
+      <p class="lede">Four quick taps and your request is ready to send. Prefer to talk? Call or text — Scrubz speaks English and French.</p>
+      <div class="direct">
+        <a href="tel:+12064924729"><div><span class="mono">Call or text</span><b>(206) 492-4729</b></div><span class="go">→</span></a>
+        <a href="/cdn-cgi/l/email-protection#8cffeffef9eef6e8e9f8ede5e0e0efccebe1ede5e0a2efe3e1"><div><span class="mono">Email</span><b><span class="__cf_email__" data-cfemail="a3d0c0d1d6c1d9c7c6d7c2cacfcfc0e3c4cec2cacf8dc0ccce">[email&#160;protected]</span></b></div><span class="go">→</span></a>
+      </div>
+      <div class="hours" id="hours"></div>
+    </div>
+
+    <form class="qform" id="qform" novalidate onsubmit="return false">
+      <div class="q-prog"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+
+      <div class="q-step on" data-s="0">
+        <span class="mono cy">Step 1 of 5</span>
+        <h3>What are we detailing?</h3>
+        <div class="opts" data-name="service" data-single>
+          <button type="button" class="opt" data-v="Premium Interior Detail"><b>Premium Interior</b><span>Auto detailing</span></button>
+          <button type="button" class="opt" data-v="Premium Exterior Detail"><b>Premium Exterior</b><span>Auto detailing</span></button>
+          <button type="button" class="opt" data-v="Deluxe Detail"><b>Deluxe Detail</b><span>Inside + outside</span></button>
+          <button type="button" class="opt" data-v="Clay & Seal"><b>Clay &amp; Seal</b><span>Paint · $250</span></button>
+          <button type="button" class="opt" data-v="Stage 1 Polish"><b>Stage 1 Polish</b><span>Paint · $500</span></button>
+          <button type="button" class="opt" data-v="Not sure yet"><b>Not sure yet</b><span>Help me choose</span></button>
+        </div>
+      </div>
+
+      <div class="q-step" data-s="1">
+        <span class="mono cy">Step 2 of 5</span>
+        <h3>What do you drive?</h3>
+        <div class="opts" data-name="vehicle" data-single>
+          <button type="button" class="opt" data-v="Car / Sedan"><b>Car / Sedan</b><span>Coupe · hatch</span></button>
+          <button type="button" class="opt" data-v="SUV / Crossover"><b>SUV / Crossover</b><span>2 or 3 rows</span></button>
+          <button type="button" class="opt" data-v="Truck"><b>Truck</b><span>Pickup</span></button>
+          <button type="button" class="opt" data-v="Van / Minivan"><b>Van / Minivan</b><span>Passenger</span></button>
+        </div>
+        <div class="field" style="margin-top:18px"><label for="qModel">Make &amp; model (optional)</label><input id="qModel" placeholder="e.g. 2019 Toyota Tacoma"></div>
+        <div class="field"><label>Condition</label></div>
+        <div class="opts" data-name="condition" data-single style="margin-top:-6px">
+          <button type="button" class="opt" data-v="Regular upkeep"><b>Regular upkeep</b><span>Light use</span></button>
+          <button type="button" class="opt" data-v="Needs some love"><b>Needs some love</b><span>Stains · hair</span></button>
+          <button type="button" class="opt" data-v="Full rescue"><b>Full rescue</b><span>Heavy soil</span></button>
+        </div>
+      </div>
+
+      <div class="q-step" data-s="2">
+        <span class="mono cy">Step 3 of 5</span>
+        <h3>Any add-ons?</h3>
+        <div class="opts" data-name="addons" id="qAddons"></div>
+        <p class="mono" style="color:var(--mute);margin-top:16px">Optional — skip if you’re not sure.</p>
+      </div>
+
+      <div class="q-step" data-s="3">
+        <span class="mono cy">Step 4 of 5</span>
+        <h3>Where &amp; when?</h3>
+        <div class="field"><label for="qAddr">Service address or neighborhood</label><input id="qAddr" placeholder="Street, city — e.g. Federal Way"></div>
+        <div class="row2">
+          <div class="field"><label for="qDate">Preferred date</label><input id="qDate" type="date"></div>
+          <div class="field"><label for="qTime">Time of day</label><select id="qTime"><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Flexible</option></select></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="qName">Your name</label><input id="qName" autocomplete="name"></div>
+          <div class="field"><label for="qPhone">Phone</label><input id="qPhone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="qNote">Anything we should know?</label><textarea id="qNote" placeholder="Pet hair, spills, parking notes…"></textarea></div>
+      </div>
+
+      <div class="q-step" data-s="4">
+        <span class="mono cy">Step 5 of 5</span>
+        <h3>Review &amp; send</h3>
+        <div class="summary" id="qSummary"></div>
+        <p class="mono" style="color:var(--mute)">Your request opens in your messages or email app, pre-filled and ready to send to Scrubz.</p>
+      </div>
+
+      <div class="q-step" data-s="5">
+        <div class="sent">
+          <img src="assets/logo-mark.png" alt="">
+          <h3>Request ready.</h3>
+          <p class="lede" style="margin:0 auto">Choose how to send it — Scrubz will follow up to confirm your quote and time.</p>
+          <div class="btns">
+            <a class="btn btn-cyan" id="sendSms" href="#">Send by text <span class="arr">→</span></a>
+            <a class="btn btn-ghost" id="sendMail" href="#">Send by email</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="q-nav" id="qNav">
+        <button type="button" class="back" id="qBack" hidden>← Back</button>
+        <button type="button" class="btn btn-cyan" id="qNext">Continue <span class="arr">→</span></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer data-screen-label="10 Footer">
+  <div class="foot-big">
+    <div class="foot-brand">
+      <img src="assets/logo-word.png" alt="Scrubz Mobile Detailing">
+      <p>Mobile detailing for Federal Way and King County, Washington. Foam bath, pet hair removal, UV ray protection — we do it all.</p>
+    </div>
+    <div><h4>Services</h4><ul><li><a href="#packages">Auto detailing</a></li><li><a href="#paint">Paint correction</a></li><li><a href="#paint">Add-ons</a></li><li><a href="#quote">Gift certificates</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="tel:+12064924729">(206) 492-4729</a></li><li><a href="/cdn-cgi/l/email-protection#9be8f8e9eef9e1fffeeffaf2f7f7f8dbfcf6faf2f7b5f8f4f6"><span class="__cf_email__" data-cfemail="aeddcddcdbccd4cacbdacfc7c2c2cdeec9c3cfc7c280cdc1c3">[email&#160;protected]</span></a></li><li>Federal Way, WA</li></ul></div>
+    <div><h4>Follow</h4><ul><li><a href="https://www.instagram.com/scrubzmobiledetailing/" target="_blank" rel="noopener">Instagram ↗</a></li><li><a href="https://www.facebook.com/profile.php?id=100088865822853" target="_blank" rel="noopener">Facebook ↗</a></li><li><a href="https://www.linktr.ee/scrubzmobiledetailing" target="_blank" rel="noopener">Linktree ↗</a></li></ul></div>
+  </div>
+  <div class="foot-word h-xl" aria-hidden="true">SCRUBZ</div>
+  <div class="foot-legal mono"><span>© SCRUBZ Mobile Detailing</span><span>Prices may vary · All services customizable</span></div>
+</footer>
+
+<div class="dock"><a href="tel:+12064924729">Call</a><a class="main" href="#quote">Get a quote</a></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="app.js"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
